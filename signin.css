@@ -1,0 +1,80 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Merriweather', serif;
+    background-color: #F5F5F5;
+} 
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+.navbar-brand span {
+    margin-left: 10px;
+}
+
+form#signup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+label {
+    font-size: large;
+    text-align: left; 
+    padding-top: 4%;
+}
+input {
+    width: 40%;
+    padding: 8px;
+    margin: 16px 0px;
+    box-sizing: border-box;
+    border: 1px solid black;
+}
+.button {
+    width: 100%; 
+    height: 50%;
+    margin-bottom: 20px;
+
+}
+@media only screen and (min-width: 768px) /*tablet and bigger*/
+{
+    input {
+        width: 55%; 
+        height: 50%;
+        margin-bottom: 20px;
+    }    
+}
+@media only screen and (max-width: 767px) /*phones*/
+{
+    input {
+        width: 60%; 
+        height: 50%;
+        margin-bottom: 20px;
+    }
+    
+}
+form#signup input[type="text"],
+form#signup input[type="email"],
+form#signup input[type="password"] {
+    height: 40px; /* Set the desired width */
+}
+input[type="submit"],
+#signupbtn {
+    color: white;
+    background-color: #36454F;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px; 
+    cursor: pointer;
+}
+input[type="submit"]:hover,
+#signupbtn:hover {
+    color: #36454F;
+    background-color: white;
+}
+#cartdisplay{
+    margin: 5px 10px;
+    padding: 10px 15px;
+    background-color: #e5e5e6;
+    border-radius: 100%;
+}

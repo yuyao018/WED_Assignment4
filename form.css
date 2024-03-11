@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Merriweather', serif;
+}
+body{
+    background-color: #F5F5F5;
+}
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+.navbar-brand span {
+    margin-left: 10px;
+}
+.submit {
+    background-color: green;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.clear {
+    background-color: #ccc;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.footer-logo {
+    display: flex;
+    justify-content: center;
+    font-family: 'Merriweather', serif;
+}
+#form {
+    background-image: url('images/geo-background-poly2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.form-background{
+    background-position-x: left;
+    transform: scaleX(-1);
+}
+#cartdisplay{
+    margin: 5px 10px;
+    padding: 10px 15px;
+    background-color: #e5e5e6;
+    border-radius: 100%;
+}

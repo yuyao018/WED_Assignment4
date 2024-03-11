@@ -1,0 +1,214 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Merriweather', serif;
+}
+body{
+    background-color: #F5F5F5;
+}
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+.navbar-brand span {
+    margin-left: 10px;
+}
+.image-fluid{
+    width: 100%;
+}
+#description{
+    margin-top: 0px;
+    text-align: center;
+}
+.card-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.card{
+    width: 325px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
+    margin: 20px;
+    padding-bottom: 20px;
+}
+.card-gift{
+    width: 600px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
+    margin: 20px;
+}
+.main-image1:hover{
+    content: url(./image/product1\ back1.png);
+}
+.main-image2:hover{
+    content: url(./image/product1\ back.png);
+}
+.main-image3:hover{
+    content: url(./image/product2\ back.jpg);
+}
+.main-image4:hover{
+    content: url(./image/product2\ back1.png);
+}
+.main-image5:hover{
+    content: url(./image/product3.1back.jpg);
+}
+.main-image6:hover{
+    content: url(./image/product3.2back.png);
+}
+.main-image7:hover{
+    content: url(./image/product4.1back.png);
+}
+.main-image8:hover{
+    content: url(./image/product4.2back.png);
+}
+.main-image9:hover{
+    content: url(./image/product5.1back.png);
+}
+.main-image10:hover{
+    content: url(./image/product5.2back.png);
+}
+.main-image11:hover{
+    content: url(./image/product6.1back.png);
+}
+.main-image12:hover{
+    content: url(./image/product6.2back.jpg);
+}
+.main-image13:hover{
+    content: url(./image/product7.1back.jpg);
+}
+.main-image14:hover{
+    content: url(./image/product7.2back.png);
+}
+.main-image15:hover{
+    content: url(./image/product8.1back.jpg);
+}
+.main-image16:hover{
+    content: url(./image/product8.2back.jpg);
+}
+.main-image17:hover{
+    content: url(./image/gift\ set\ back.png);
+}
+.main-image18:hover{
+    content: url(./image/valentine\ gift\ set\ back.webp);
+}
+.card img{
+    width: 100%;
+    height: 70%;
+}
+.card-gift img{
+    width: 100%;
+    min-width: 100px;
+    max-height: 400px;
+    object-fit: cover;
+}
+.card-content{
+    text-align: center;
+    padding: 0 10px;
+}
+.card-content h3{
+    font-size: 22px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+.card-content p{
+    color: #666;
+    font-size: 15px;
+    line-height: 1.2;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+#sidebar{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    background-color: black;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    color: white;
+}
+
+#sidebar a{
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+#main{
+    transition: margin-left 0.5s;
+    padding: 16px;
+}
+
+#sidebarCollapse{
+    width: 50px;
+    height: 30px;
+    top: 5px;
+    right: 15px;
+    z-index: 1;
+    position: fixed;
+    justify-content: right;
+    cursor: pointer;
+}
+
+#sidebarCollapse i{
+    transform: rotate(0deg);
+    transition: transform 0.3s;
+}
+
+#sidebar.active{
+    width: 260px;
+}
+
+#sidebar.active #sidebarCollapse i {
+    transform: rotate(-180deg);
+}
+
+.cart-item{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.footer-logo {
+    display: flex;
+    justify-content: center;
+    font-family: 'Merriweather', serif;
+}
+#cartdisplay{
+    margin: 5px 10px;
+    padding: 10px 15px;
+    background-color: #e5e5e6;
+    border-radius: 100%;
+}
+#candle-type{
+    font-style: none;
+    color: black;
+}
+#candles::before{
+    display: block; 
+    content: " "; 
+    margin-top: -160px; 
+    height: 160px; 
+    visibility: hidden; 
+    pointer-events: none;
+}
+#gift-set::before{
+    display: block; 
+    content: " "; 
+    margin-top:-80px; 
+    height: 80px; 
+    visibility: hidden; 
+    pointer-events: none;
+}
