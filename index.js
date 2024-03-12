@@ -276,11 +276,20 @@ function checkoutdisplay(){
 
     document.getElementById("checkoutform").addEventListener("click", function (event) {
         var form = document.querySelector("form.needs-validation");
+        const storedUsers = JSON.parse(localStorage.getItem('userDatals')) || [];
+        const matchingUsername = storedUsers.find(user => user.username);
+        const usernametxt = document.getElementById("username").value;
         if (!form.checkValidity()) {
             // Some form fields are incomplete, show a message
             alert("Please fill in all parts of the form.");
-            event.preventDefault(); // Prevents the default form submission
-        } else {
+            event.preventDefault(); //Prevents the default form submission
+        } 
+        else if(matchingUsername !== usernametxt){
+            alert("No account! Please Sign In");
+            event.preventDefault();
+            window.location.href = 'signin.html';
+        }
+        else {
             // All form fields are filled, navigate to another page
             alert("Payment successful");
             localStorage.setItem('nocartls', 0);
