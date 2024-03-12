@@ -46,17 +46,26 @@ body{
     background-color: #413d3d;
     padding: 10px 0;
 }
-@media(min-width: 1318px){
+@media(min-width: 1300px){
     .aboutus-content h2{
         font-size: 50px;
     }
     .aboutus-content p{
-        font-size: 30px;
+        font-size: 25px;
     }
 }
-@media(max-width: 1318px) and  (min-width: 768px){
+@media(max-width: 1300px) and  (min-width: 950px){
     .aboutus-content h2{
-        font-size: 30px;
+        font-size: 38px;
+    }
+    .aboutus-content p{
+        font-size: 20px;
+    }
+}
+@media(max-width: 950px) and  (min-width: 768px){
+    .aboutus-content h2{
+        font-size: 28px;
+        margin: 0;
     }
     .aboutus-content p{
         font-size: 15px;
