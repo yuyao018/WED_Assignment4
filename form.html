@@ -89,7 +89,7 @@
                     <option>⭐⭐⭐⭐⭐</option>
                 </select>
             </div>
-            <div style="padding-bottom: 18px;">Description<span style="color: red;"> *</span><br/>
+            <div style="padding-bottom: 18px;">Description (Optional)<span style="color: red;"> *</span><br/>
                 <textarea id="data_8" false name="data_8" style="max-width : 450px;" rows="9" class="form-control"></textarea>
             </div>
             <div style="padding-bottom: 18px;">Would you recommend this product?<br/>
@@ -161,10 +161,6 @@
             }
             else if (!validateEmail(document.getElementById('data_10').value.trim())) {
             alert('Email must be a valid email address!');
-            return false;
-            }
-            else if (isEmpty(document.getElementById('data_8').value.trim())) {
-            alert('Description is required!');
             return false;
             }
             else{
