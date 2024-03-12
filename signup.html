@@ -144,6 +144,11 @@
         }
 
         function registerUser() {
+            let itemindex=parseInt(localStorage.getItem('nocartls'));
+            if(itemindex){
+                nocart=itemindex;
+                document.getElementById("cartdisplay").innerHTML=nocart;
+            }
             const name = document.getElementById('name').value;
             const username = document.getElementById('username').value;
             const email = document.getElementById('email').value;
