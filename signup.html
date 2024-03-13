@@ -138,6 +138,11 @@
     </section>
 
     <script>
+        let itemindex=parseInt(localStorage.getItem('nocartls'));
+        if(itemindex){
+            nocart=itemindex;
+            document.getElementById("cartdisplay").innerHTML=nocart;
+        }
         //reset button
         function reset() {
             document.getElementById("profileForm").reset();
