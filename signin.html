@@ -138,10 +138,11 @@
             const email = document.getElementById('emailtxt').value;
             const password = document.getElementById('pass').value;
             const storedUsers = JSON.parse(localStorage.getItem('userDatals')) || [];
-
             const matchingUser = storedUsers.find(user => user.username === username && user.email === email && user.password === password);
             if (matchingUser) {
+                localStorage.setItem('siginuser', JSON.stringify(matchingUser));
                 alert('Welcome, ' + username + '!');
+                
                 event.preventDefault();
                 window.location.href = 'index.html';
             } else {
