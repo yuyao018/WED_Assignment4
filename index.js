@@ -273,32 +273,37 @@ function checkoutdisplay(){
         document.getElementById("shippingprice").innerHTML= "0.00";
         document.getElementById("totalprice").innerHTML= "0.00";
     }
-
-    document.getElementById("checkoutform").addEventListener("click", function (event) {
-        var form = document.querySelector("form.needs-validation");
-        const storedUsers = JSON.parse(localStorage.getItem('userDatals')) || [];
-        const matchingUsername = storedUsers.find(user => user.username);
-        const usernametxt = document.getElementById("username").value;
-        if (!form.checkValidity()) {
-            // Some form fields are incomplete, show a message
-            alert("Please fill in all parts of the form.");
-            event.preventDefault(); //Prevents the default form submission
-        } 
-        else if(matchingUsername !== usernametxt){
-            alert("No account! Please Sign In");
-            event.preventDefault();
-            window.location.href = 'signin.html';
-        }
-        else {
-            // All form fields are filled, navigate to another page
-            alert("Payment successful");
-            localStorage.setItem('nocartls', 0);
-            localStorage.removeItem('itemincartls');
-            event.preventDefault();
-            window.location.href = 'index.html';
-        }
-    });
+    let checkoutForm = document.querySelector("form.needs-validation");
+    if (checkoutForm) {
+        checkoutForm.addEventListener('submit', checkoutform);
+    }
 }
+function checkoutform(event){
+    var form = document.querySelector("form.needs-validation");
+    let username = document.getElementById("username").value;
+    let email = document.getElementById("email").value;
+    let signInUser = JSON.parse(localStorage.getItem('siginuser')) || {};
+    const matchingUsername = signInUser.username;
+    const matchingUserEmail = signInUser.email;
+    if (!form.checkValidity()) {
+        // Some form fields are incomplete, show a message
+        alert("Please fill in all parts of the form.");
+    } 
+    else if(username !== matchingUsername && email !== matchingUserEmail){
+        alert("No account! Please Sign In");
+        event.preventDefault();
+        window.location.href = 'signin.html';
+    }
+    else{
+        // All form fields are filled and valid account, navigate to another page
+        alert("Payment successful");
+        localStorage.setItem('nocartls', 0);
+        localStorage.removeItem('itemincartls');
+        event.preventDefault();
+        window.location.href = 'index.html';
+    }
+}
+
 function updateCheckoutButton(){
     let isCartEmpty = itemincart.length;
     let checkoutButton = document.getElementById("checkoutbtn");
